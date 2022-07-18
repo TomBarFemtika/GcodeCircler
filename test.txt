@@ -1,0 +1,8 @@
+$R:=1000
+MoveA(xy,$R,0)
+Shutter(1)
+For($a,0,2*pi,pi/180)
+MoveA(xy,$R*Cos($a),$R*Sin($a))
+End
+
+ExportGeometryToGCode("TestCircle.gcode");
